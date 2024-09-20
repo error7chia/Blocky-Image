@@ -26,12 +26,12 @@ def image_to_pixel_blocks(path, block_size, subblock_size, output):
     #print(new_height,new_width)  #debug
     block_image = np.ones((new_height, new_width), dtype=np.uint8) * 255  # initialise as white
     
-    # pixel_data[i,j] is the gray value of the pixel
+    # pixel_data[i,j] is the grey value of the pixel
     pixel_per_block = block_size ** 2
     block_subblock_number = pixel_per_block / (subblock_size **2)
     
     
-    # going through every block and decide whether a block should be black or white
+    # going through every block
     for i in range(0, new_height, block_size):
         for j in range(0, new_width, block_size):
             #now we are at the very corner of the block
